@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accent Detection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mb-4">Accent Detection from Video or Audio</h1>
+                        <p class="text-center text-muted mb-4">Provide a YouTube or Loom video link, or upload an MP3/MP4 file from your local machine.</p>
+                        {% if error %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                        {% endif %}
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="video_url" class="form-label">YouTube or Loom Video URL:</label>
+                                <input type="text" name="video_url" id="video_url" class="form-control" placeholder="Paste a YouTube or Loom video link">
+                            </div>
+                            <div class="text-center mb-2">OR</div>
+                            <div class="mb-3">
+                                <label for="audio_file" class="form-label">Upload MP3 or MP4 file:</label>
+                                <input type="file" name="audio_file" id="audio_file" class="form-control" accept=".mp3,.mp4">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Detect Accent</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

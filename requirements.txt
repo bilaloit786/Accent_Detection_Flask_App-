@@ -1,0 +1,6 @@
+Flask==2.2.5
+yt-dlp==2024.4.9
+pydub==0.25.1
+speechbrain==0.5.16
+torch==2.2.2
+moviepy==1.0.3

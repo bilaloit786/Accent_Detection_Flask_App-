@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accent Detection Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h1 class="card-title mb-4">Detection Result</h1>
+                        <p class="fs-4"><strong>Accent:</strong> {% if flag %}<span style="font-size:2rem;">{{ flag }}</span>{% endif %} {{ accent }}</p>
+                        <p class="fs-5"><strong>Confidence:</strong> {{ confidence }}%</p>
+                        <a href="/" class="btn btn-secondary mt-3">Detect another video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
